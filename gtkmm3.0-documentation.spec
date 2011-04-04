@@ -1,8 +1,8 @@
-%define version 2.21.8.1
+%define version 2.99.4
 %define release %mkrel 1
 
 %define pkgname	gtkmm-documentation
-%define api_version 2.4
+%define api_version 3.0
 
 Name:		gtkmm%{api_version}-documentation
 Summary:	GTKmm reference manual and examples
@@ -13,15 +13,14 @@ Group:		Books/Other
 URL:		http://gtkmm.sourceforge.net/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:		http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.bz2
-BuildRequires: gtkmm2.4-devel >= 2.20.0
+BuildRequires: gtkmm3.0-devel >= 2.99.3
 BuildRequires: glibmm2.4-devel >= 2.24.0
-BuildRequires: libglademm2.4-devel >= 2.6.0
 BuildRequires: gnome-doc-utils
 BuildArch: noarch
-Requires: gtkmm2.4-doc >= 2.14.0
+Requires: gtkmm3.0-doc
 
 %description
-Gtkmm provides a C++ interface to the GTK+ GUI library. Gtkmm2 wraps GTK+ 2.
+Gtkmm provides a C++ interface to the GTK+ GUI library. Gtkmm3 wraps GTK+ 3.
 Highlights include typesafe callbacks, widgets extensible via inheritance
 and a comprehensive set of widget classes that can be freely combined to
 quickly create complex user interfaces.
@@ -41,8 +40,6 @@ rm -rf %{buildroot}
 %makeinstall_std
 
 %find_lang gtkmm-tutorial --with-gnome
-#gw already in gtkmm2.4-doc
-rm -rf %buildroot%{_datadir}/doc/gtkmm-%{api_version}/docs/{FAQ,images}
 
 %clean
 rm -rf %{buildroot}
