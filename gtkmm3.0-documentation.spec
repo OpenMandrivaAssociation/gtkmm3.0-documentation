@@ -1,4 +1,4 @@
-%define version 3.0.3
+%define version 3.2.0
 %define release %mkrel 1
 
 %define pkgname	gtkmm-documentation
@@ -12,8 +12,8 @@ License:	GPLv2+ and GFDL
 Group:		Books/Other
 URL:		http://gtkmm.sourceforge.net/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source:		http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.bz2
-BuildRequires: gtkmm3.0-devel >= 2.99.3
+Source:		http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.xz
+BuildRequires: gtkmm3.0-devel >= 3.2
 BuildRequires: glibmm2.4-devel >= 2.24.0
 BuildRequires: gnome-doc-utils
 BuildArch: noarch
