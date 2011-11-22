@@ -1,4 +1,4 @@
-%define version 3.2.0
+%define version 3.2.1
 %define release %mkrel 1
 
 %define pkgname	gtkmm-documentation
