@@ -1,23 +1,19 @@
-%define version 3.2.1
-%define release %mkrel 1
-
 %define pkgname	gtkmm-documentation
-%define api_version 3.0
+%define api	3.0
 
-Name:		gtkmm%{api_version}-documentation
 Summary:	GTKmm reference manual and examples
-Version:	%{version}
-Release:	%{release}
+Name:		gtkmm%{api}-documentation
+Version:	3.2.1
+Release:	1
 License:	GPLv2+ and GFDL
 Group:		Books/Other
 URL:		http://gtkmm.sourceforge.net/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source:		http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.xz
-BuildRequires: gtkmm3.0-devel >= 3.2
-BuildRequires: glibmm2.4-devel >= 2.24.0
-BuildRequires: gnome-doc-utils
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.xz
 BuildArch: noarch
-Requires: gtkmm3.0-doc
+BuildRequires:	pkgconfig(glibmm-2.4)
+BuildRequires:	pkgconfig(gnome-doc-utils)
+BuildRequires:	pkgconfig(gtkmm-3.0)
+Requires:	gtkmm3.0-doc
 
 %description
 Gtkmm provides a C++ interface to the GTK+ GUI library. Gtkmm3 wraps GTK+ 3.
@@ -29,23 +25,19 @@ This package contains all API documentation for gtkmm. You can readily read
 this documentation with devhelp, a documentation reader.
 
 %prep
-%setup -q -n %{pkgname}-%{version}
+%setup -qn %{pkgname}-%{version}
 
 %build
-./configure --prefix=%_prefix
-make
+%configure2_5x \
+	--build=%{_build}
+
+%make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %find_lang gtkmm-tutorial --with-gnome
 
-%clean
-rm -rf %{buildroot}
-
 %files -f gtkmm-tutorial.lang
-%defattr(-, root, root)
-%doc %{_datadir}/doc/gtkmm-%{api_version}
-
+%doc %{_datadir}/doc/gtkmm-%{api}
 
