@@ -3,7 +3,7 @@
 
 Summary:	GTKmm reference manual and examples
 Name:		gtkmm%{api}-documentation
-Version:	3.2.1
+Version:	3.4.1
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Books/Other
