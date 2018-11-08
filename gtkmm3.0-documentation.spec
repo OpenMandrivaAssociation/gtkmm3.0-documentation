@@ -2,9 +2,9 @@
 %define api	3.0
 
 Summary:	GTKmm reference manual and examples
-Name:		gtkmm%{api}-documentation
-Version:	3.4.1
-Release:	2
+Name:		gtkmm-documentation
+Version:	3.22.1
+Release:	1
 License:	GPLv2+ and GFDL
 Group:		Books/Other
 URL:		http://gtkmm.sourceforge.net/
@@ -25,7 +25,7 @@ This package contains all API documentation for gtkmm. You can readily read
 this documentation with devhelp, a documentation reader.
 
 %prep
-%setup -qn %{pkgname}-%{version}
+%setup -q
 
 %build
 %configure2_5x \
