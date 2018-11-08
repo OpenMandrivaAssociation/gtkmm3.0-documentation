@@ -17,7 +17,6 @@ BuildRequires:	scrollkeeper
 BuildRequires:	pkgconfig
 BuildRequires:	intltool
 BuildRequires:	perl
-B
 Requires:	gtkmm3.0-doc
 
 %description
