@@ -17,6 +17,7 @@ BuildRequires:	scrollkeeper
 BuildRequires:	pkgconfig
 BuildRequires:	intltool
 BuildRequires:	perl
+BuildRequires:  meson
 Requires:	gtkmm3.0-doc
 
 %description
@@ -32,11 +33,11 @@ this documentation with devhelp, a documentation reader.
 %setup -q
 
 %build
-%configure2_5x
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang %{name} --with-gnome --all-name --with-gnome
 
