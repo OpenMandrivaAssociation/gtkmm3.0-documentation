@@ -3,7 +3,7 @@
 
 Summary:	GTKmm reference manual and examples
 Name:		gtkmm-documentation
-Version:	3.22.1
+Version:	3.24.1
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Books/Other
@@ -17,7 +17,9 @@ BuildRequires:	scrollkeeper
 BuildRequires:	pkgconfig
 BuildRequires:	intltool
 BuildRequires:	perl
-Requires:	gtkmm3.0-doc
+BuildRequires:  meson
+BuildRequires:  docbook-dtds
+#Requires:	gtkmm3.0-doc
 
 %description
 Gtkmm provides a C++ interface to the GTK+ GUI library. Gtkmm3 wraps GTK+ 3.
@@ -32,15 +34,15 @@ this documentation with devhelp, a documentation reader.
 %setup -q
 
 %build
-%configure2_5x
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
-%find_lang %{name} --with-gnome --all-name --with-gnome
+#find_lang %{name} --with-gnome --all-name --with-gnome
 
-%files -f %{name}.lang
+%files
 %doc NEWS  README AUTHORS
 %{_datadir}/doc/gtkmm-3.0/
 
