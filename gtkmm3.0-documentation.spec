@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	intltool
 BuildRequires:	perl
 BuildRequires:  meson
+BuildRequires:  docbook-dtds
 Requires:	gtkmm3.0-doc
 
 %description
