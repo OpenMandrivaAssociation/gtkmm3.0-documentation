@@ -40,9 +40,9 @@ this documentation with devhelp, a documentation reader.
 %install
 %meson_install
 
-%find_lang %{name} --with-gnome --all-name --with-gnome
+#find_lang %{name} --with-gnome --all-name --with-gnome
 
-%files -f %{name}.lang
+%files
 %doc NEWS  README AUTHORS
 %{_datadir}/doc/gtkmm-3.0/
 
