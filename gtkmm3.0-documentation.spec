@@ -19,7 +19,7 @@ BuildRequires:	intltool
 BuildRequires:	perl
 BuildRequires:  meson
 BuildRequires:  docbook-dtds
-Requires:	gtkmm3.0-doc
+#Requires:	gtkmm3.0-doc
 
 %description
 Gtkmm provides a C++ interface to the GTK+ GUI library. Gtkmm3 wraps GTK+ 3.
