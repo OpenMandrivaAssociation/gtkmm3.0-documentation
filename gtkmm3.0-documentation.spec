@@ -43,6 +43,5 @@ this documentation with devhelp, a documentation reader.
 #find_lang %{name} --with-gnome --all-name --with-gnome
 
 %files
-%doc NEWS  README AUTHORS
+%doc NEWS  README*
 %{_datadir}/doc/gtkmm-3.0/
-
