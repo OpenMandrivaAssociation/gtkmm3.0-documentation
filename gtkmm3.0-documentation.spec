@@ -3,12 +3,12 @@
 
 Summary:	GTKmm reference manual and examples
 Name:		gtkmm-documentation
-Version:	3.24.1
+Version:	3.24.4
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Books/Other
-URL:		http://gtkmm.sourceforge.net/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.xz
+URL:		https://gtkmm.sourceforge.net/
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.xz
 BuildArch: noarch
 BuildRequires:	pkgconfig(glibmm-2.4)
 BuildRequires:	pkgconfig(gnome-doc-utils)
