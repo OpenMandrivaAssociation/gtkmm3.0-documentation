@@ -45,3 +45,5 @@ this documentation with devhelp, a documentation reader.
 %files
 %doc NEWS  README*
 %{_datadir}/doc/gtkmm-3.0/
+%{_datadir}/help/C/gtkmm-tutorial/figures/
+%{_datadir}/help/C/gtkmm-tutorial/index.docbook
